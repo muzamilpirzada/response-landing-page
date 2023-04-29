@@ -38,6 +38,7 @@ nav .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem 0;
 }
 
 nav .container img{
@@ -143,4 +144,76 @@ section .container a::before{
 
 section .container a:hover{
     background: linear-gradient(to left, var(--color-secondary),var(--color-primary));
+}
+
+
+/* ======Media query====== */
+@media screen and (max-width: 700px)  {
+    nav .container{
+        width: 100%;
+        padding: 1rem;
+        background:var(--color-secondary) ;
+    }
+
+    nav img{
+        margin-left: 1rem;
+    }
+
+    /* NAVBAR */
+    nav .container #toggleNav{
+        display: inline-block;
+        color: var(--color-light);
+        font-size: 2rem;
+        margin-right: 1rem;
+        cursor: pointer;
+        transition: all300ms ease;
+    }
+
+    nav .container #showNav:checked~ ul{
+        display: block;
+    }
+
+    nav .container ul{
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+    }
+
+    nav .container ul li{
+        text-align: center;
+        background: var(--color-primary);
+        padding: 2rem 0;
+        transition: all 1ms ease;
+        cursor: pointer;
+    }
+
+    nav .container ul li:hover{
+        background: var(--color-tertiary);
+    }
+
+
+
+    /* Header section responsive */
+    section .container{
+        margin-top: 2rem;
+    }
+
+    section .container h1{
+        font-size: 5.3rem;
+
+    }
+    selection .container h3{
+        font-size: 1.5rem;
+    }
+
+    p{
+        padding: 1rem;
+
+    }
+
+    section .container a{
+        padding: 1rem 2rem;
+    }
+    
 }
